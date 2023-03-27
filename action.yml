@@ -1,0 +1,20 @@
+name: Github to SourceCommit Sync
+description: Sync Github to NCloud SourceCommit
+author: 'es5h'
+inputs:
+  repository_url:
+    description: 'SourceCommit repository url'
+    required: true
+  ssh_private_key:
+    description: 'SSH Private key'
+    required: true
+  ssh_key:
+    description: 'SSH key'
+    required: true
+  host_url:
+    description: 'SSH host url'
+    required: false
+    default: 'devtools.ncloud.com'
+runs:
+  using: 'docker'
+  image: './Dockerfile'
